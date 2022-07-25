@@ -31,16 +31,13 @@ public class D04_searchStepDef {
     @Then("user could search successfully with SKU")
     public void search_with_sku_successfully() {
 
+        // first assert
         SoftAssert soft = new SoftAssert();
         soft.assertTrue(Hooks.driver.getCurrentUrl().contains("https://demo.nopcommerce.com/search?q=AP_MBP_13"), "URL after search");
 
+        // sec assert
+        soft.assertEquals(p03_homePage.isItSearchResult(),soft);
+        
         // Assert All
         soft.assertAll();
     }
-
-
-
-
-
-
-}

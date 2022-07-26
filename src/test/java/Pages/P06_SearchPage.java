@@ -22,6 +22,15 @@ public class P06_SearchPage {
         public WebElement noProducts(){
             return driver.findElement(By.cssSelector("div[class=\"no-result\"]"));
         }
+        
+           public WebElement product() {
+        return driver.findElement(By.cssSelector("a[href=\"/apple-macbook-pro-13-inch\"]"));
+    }
+
+    public WebElement assertion() {
+        return driver.findElement(By.id("sku-4"));
+    }
+        
     }
 
 
